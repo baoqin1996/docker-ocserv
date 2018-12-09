@@ -24,7 +24,7 @@ RUN buildDeps=" \
 	set -x \
 	&& apk add --update --virtual .build-deps $buildDeps \
 	&& curl -SL "https://github.com/baoqin1996/Ocserv/raw/master/ocserv-$OC_VERSION.tar.xz" -o ocserv.tar.xz \
-	&& curl -SL "https://github.com/baoqin1996/Ocserv/raw/master/ocserv.tar.xz.sig" -o ocserv.tar.xz.sig \
+	&& curl -SL "https://github.com/baoqin1996/Ocserv/raw/master/ocserv-$OC_VERSION.tar.xz.sig" -o ocserv.tar.xz.sig \
 	&& gpg --keyserver pgp.mit.edu --recv-key 7F343FA7 \
 	&& gpg --keyserver pgp.mit.edu --recv-key 96865171 \
 	&& gpg --verify ocserv.tar.xz.sig \
