@@ -4,6 +4,7 @@ MAINTAINER Tommy Lau <tommy@gen-new.com>
 
 ENV OC_VERSION=0.12.1
 
+RUN echo -e "http://nl.alpinelinux.org/alpine/v3.7/main\nhttp://nl.alpinelinux.org/alpine/v3.7/community" > /etc/apk/repositories
 RUN buildDeps=" \
 		curl \
 		g++ \
